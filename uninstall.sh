@@ -5,3 +5,4 @@ rm  /etc/systemd/system/clash.service
 # systemctl daemon-reload
 sed -i '/alias openproxy/d' `cat initfile`
 sed -i '/alias closeproxy/d' `cat initfile`
+sed -i '/http_proxy/d' /etc/sudoers
