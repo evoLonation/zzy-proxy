@@ -1,6 +1,19 @@
-echo "your architecture: ${1}"
-echo "your bash init file: ${2}"
-echo ${2} > initfile
+#!/bin/bash
+arch=${1}
+user=${2}
+if [ $USER != "root" ]; then
+	echo "this script must executed by root, now is ${USER}"
+	exit
+fi
+if [ -z $2 ]; then 
+	echo "usage: ${0} arch user"
+	exit
+fi
+initfile=`. ./getinitfile.sh ${user}`
+echo "your architecture: ${arch}"
+echo "your user: ${user}"
+echo "your initfile: ${initfile}"
+exit
 gunzip -k clash-linux-${1}-v1.13.0.gz
 mkdir -p /usr/local/bin
 mv -T clash-linux-${1}-v1.13.0 /usr/local/bin/clash
