@@ -10,8 +10,6 @@ hosts:
   services.googleapis.cn: 216.58.200.67
   www.google.cn: 216.58.200.67
 external-controller: 0.0.0.0:9090
-secret: '5929'
-external-ui: /etc/clash/clash-dashboard
 clash-for-android:
   append-system-dns: false
 profile:
@@ -214,6 +212,7 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 自动选择
+      - 德国
       - 新加坡
       - 美国
       - 日本
@@ -222,7 +221,6 @@ proxy-groups:
       - 🦥 懒人节点 01
       - 🇷🇺 俄罗斯 01
       - 🇹🇷 土耳其 01
-      - 🇩🇪 德国 01
       - 🇱🇺 卢森堡 01
       - 🇬🇧 英国 01
       - 🇵🇭 菲律宾 01
@@ -395,12 +393,12 @@ proxy-groups:
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 500
-  - name: ⚪ ChatGPT
+  - name: 德国
+    proxies:
+      - 🇩🇪 德国 01
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 500
-    proxies:
-      - 🚀 节点选择
   - name: 🏫 校园网
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -443,11 +441,18 @@ proxy-groups:
     interval: 500
     proxies:
       - 🚀 节点选择
+  - name: ⚪ ChatGPT
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 500
+    proxies:
+      - 德国
   - name: 🚀 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 500
     proxies:
+      - 德国
       - 新加坡
       - 美国
       - 日本
@@ -456,7 +461,6 @@ proxy-groups:
       - 🦥 懒人节点 01
       - 🇷🇺 俄罗斯 01
       - 🇹🇷 土耳其 01
-      - 🇩🇪 德国 01
       - 🇱🇺 卢森堡 01
       - 🇬🇧 英国 01
       - 🇵🇭 菲律宾 01
@@ -476,13 +480,13 @@ rules:
   - DOMAIN-KEYWORD,xy2401.com,🌍 海外服务
   - DOMAIN-KEYWORD,docker,🌍 海外服务
   - DOMAIN-KEYWORD,k8s,🌍 海外服务
+  - DOMAIN-SUFFIX,openai.com,⚪ ChatGPT
   - DOMAIN-KEYWORD,go.dev,⚪ GO
   - DOMAIN-KEYWORD,bing.com,⚪ BING
   - DOMAIN-SUFFIX,spotify.com,⚪ Spotify
   - DOMAIN-SUFFIX,rm2pt.com,⚪ RM2PT
   - DOMAIN-SUFFIX,notion.so,🖊 NOTION
   - DOMAIN-SUFFIX,buaa.edu.cn,🏫 校园网
-  - DOMAIN-SUFFIX,openai.com,⚪ ChatGPT
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
