@@ -10,6 +10,8 @@ hosts:
   services.googleapis.cn: 216.58.200.67
   www.google.cn: 216.58.200.67
 external-controller: 0.0.0.0:9090
+secret: '5929'
+external-ui: /etc/clash/clash-dashboard
 clash-for-android:
   append-system-dns: false
 profile:
@@ -17,109 +19,91 @@ profile:
 proxies:
   - name: 🦥 懒人节点 01
     type: ss
-    server: fa2e2e87-53d3-4659-8b91-2952fcb4827c.qazwsx123.xyz
+    server: 736b181e-70dc-461c-b5ab-ae5103264116.qawer.cloud
     port: 37811
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇭🇰 香港 01
     type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
+    server: 8e185d39-7666-4cf4-922b-f37f40d06707.qosnet.xyz
     port: 37511
     cipher: aes-256-gcm
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇭🇰 香港 02
     type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
+    server: 8e185d39-7666-4cf4-922b-f37f40d06707.qosnet.xyz
     port: 37512
     cipher: aes-256-gcm
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇭🇰 香港 03
     type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
+    server: 8e185d39-7666-4cf4-922b-f37f40d06707.qosnet.xyz
     port: 37513
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
-  - name: 🇭🇰 香港 04#
+  - name: 🇭🇰 香港 04-3x
     type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
+    server: f0ec8daf-8842-4dbc-88db-1e73e5ae5d4d.qawer.life
     port: 37514
-    cipher: aes-256-gcm
+    cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇹🇼 台湾 01
     type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
+    server: f0ec8daf-8842-4dbc-88db-1e73e5ae5d4d.qawer.life
     port: 37521
-    cipher: aes-256-gcm
+    cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇹🇼 台湾 02
     type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
+    server: f0ec8daf-8842-4dbc-88db-1e73e5ae5d4d.qawer.life
     port: 37522
-    cipher: aes-256-gcm
-    password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
-  - name: 🇹🇼 台湾 03
-    type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
-    port: 37523
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇸🇬 新加坡 01
     type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
+    server: 8e185d39-7666-4cf4-922b-f37f40d06707.qosnet.xyz
     port: 37531
     cipher: aes-256-gcm
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇸🇬 新加坡 02
     type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
+    server: f0ec8daf-8842-4dbc-88db-1e73e5ae5d4d.qawer.life
     port: 37532
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇸🇬 新加坡 03
     type: ss
-    server: a6e65ed2-d7f7-4df5-807f-57238de3678a.qawer.life
+    server: f0ec8daf-8842-4dbc-88db-1e73e5ae5d4d.qawer.life
     port: 37533
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇯🇵 日本 01
     type: ss
-    server: fa2e2e87-53d3-4659-8b91-2952fcb4827c.qazwsx123.xyz
+    server: 736b181e-70dc-461c-b5ab-ae5103264116.qawer.cloud
     port: 37541
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇯🇵 日本 02
     type: ss
-    server: fa2e2e87-53d3-4659-8b91-2952fcb4827c.qazwsx123.xyz
+    server: 736b181e-70dc-461c-b5ab-ae5103264116.qawer.cloud
     port: 37542
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇯🇵 日本 03
     type: ss
-    server: fa2e2e87-53d3-4659-8b91-2952fcb4827c.qazwsx123.xyz
+    server: 736b181e-70dc-461c-b5ab-ae5103264116.qawer.cloud
     port: 37543
-    cipher: chacha20-ietf-poly1305
-    password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
-  - name: 🇰🇷 韩国 01
-    type: ss
-    server: fa2e2e87-53d3-4659-8b91-2952fcb4827c.qazwsx123.xyz
-    port: 37551
-    cipher: chacha20-ietf-poly1305
-    password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
-  - name: 🇰🇷 韩国 02
-    type: ss
-    server: fa2e2e87-53d3-4659-8b91-2952fcb4827c.qazwsx123.xyz
-    port: 37552
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇺🇸 美国 01
     type: ss
-    server: ydq8y9v8387oi7l8-zefdi9bqpwe4qw78-7fbnd2qfjbvoj4fy.qazwsx123.xyz
+    server: 736b181e-70dc-461c-b5ab-ae5103264116.qawer.cloud
     port: 37561
-    cipher: aes-256-gcm
+    cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇺🇸 美国 02
     type: ss
-    server: ydq8y9v8387oi7l8-zefdi9bqpwe4qw78-7fbnd2qfjbvoj4fy.qazwsx123.xyz
+    server: 736b181e-70dc-461c-b5ab-ae5103264116.qawer.cloud
     port: 37562
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
@@ -191,19 +175,19 @@ proxies:
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇿🇦 南非 01
     type: ss
-    server: 183.56.206.249
-    port: 56040
+    server: 124.225.140.103
+    port: 37892
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇧🇷 巴西 01
     type: ss
-    server: ydq8y9v8387oi7l8-zefdi9bqpwe4qw78-7fbnd2qfjbvoj4fy.qazwsx123.xyz
+    server: 736b181e-70dc-461c-b5ab-ae5103264116.qawer.cloud
     port: 37894
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇦🇷 阿根廷 01
     type: ss
-    server: ydq8y9v8387oi7l8-zefdi9bqpwe4qw78-7fbnd2qfjbvoj4fy.qazwsx123.xyz
+    server: 736b181e-70dc-461c-b5ab-ae5103264116.qawer.cloud
     port: 37895
     cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
@@ -215,9 +199,9 @@ proxies:
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇨🇦 加拿大 01
     type: ss
-    server: ydq8y9v8387oi7l8-zefdi9bqpwe4qw78-7fbnd2qfjbvoj4fy.qazwsx123.xyz
+    server: 736b181e-70dc-461c-b5ab-ae5103264116.qawer.cloud
     port: 37898
-    cipher: aes-256-gcm
+    cipher: chacha20-ietf-poly1305
     password: 65841-NdTcDGeR-XFmHXfNzGhdAB5XtgxBmtycC945xasht
   - name: 🇺🇦 乌克兰 01
     type: ss
@@ -233,7 +217,6 @@ proxy-groups:
       - 新加坡
       - 美国
       - 日本
-      - 韩国
       - 台湾
       - 香港
       - 🦥 懒人节点 01
@@ -378,7 +361,7 @@ proxy-groups:
       - 🇭🇰 香港 01
       - 🇭🇰 香港 02
       - 🇭🇰 香港 03
-      - 🇭🇰 香港 04#
+      - 🇭🇰 香港 04-3x
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 500
@@ -386,14 +369,6 @@ proxy-groups:
     proxies:
       - 🇹🇼 台湾 01
       - 🇹🇼 台湾 02
-      - 🇹🇼 台湾 03
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 500
-  - name: 韩国
-    proxies:
-      - 🇰🇷 韩国 01
-      - 🇰🇷 韩国 02
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 500
@@ -462,6 +437,12 @@ proxy-groups:
     interval: 500
     proxies:
       - 🚀 节点选择
+  - name: 🌍 海外服务
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 500
+    proxies:
+      - 🚀 节点选择
   - name: 🚀 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -470,7 +451,6 @@ proxy-groups:
       - 新加坡
       - 美国
       - 日本
-      - 韩国
       - 台湾
       - 香港
       - 🦥 懒人节点 01
@@ -492,6 +472,10 @@ proxy-groups:
       - 🇨🇦 加拿大 01
       - 🇺🇦 乌克兰 01
 rules:
+  - DOMAIN-KEYWORD,deepl.com,🌍 海外服务
+  - DOMAIN-KEYWORD,xy2401.com,🌍 海外服务
+  - DOMAIN-KEYWORD,docker,🌍 海外服务
+  - DOMAIN-KEYWORD,k8s,🌍 海外服务
   - DOMAIN-KEYWORD,go.dev,⚪ GO
   - DOMAIN-KEYWORD,bing.com,⚪ BING
   - DOMAIN-SUFFIX,spotify.com,⚪ Spotify
